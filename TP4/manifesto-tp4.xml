@@ -27,8 +27,8 @@
       <b>XSLT</b>, permite algumas facilidades no tratamento de informação.
     </para>
     <para>
-O trabalho permitiu o envolvimento do aluno e demonstrar algumas utilizações comuns para exemplificar a potência destas linguagens, 
-neste caso, a criação de índices e a divisão do output em múltiplos ficheiros, e em JS foi criado um servidor suportando a páginas html criadas; 
+O trabalho permitiu o envolvimento do aluno e demonstrar algumas utilizações comuns para exemplificar a potência destas linguagens,
+neste caso, a criação de índices e a divisão do output em múltiplos ficheiros, e em JS foi criado um servidor suportando a páginas html criadas;
 </para>
 <para>
 Foi criado um site constituído por um indice.html onde se encontra o índice do "Arquivo de Música Digital", e um link para todos as obras armazenadas, estas organizadas em páginas separados.
@@ -37,9 +37,6 @@ Foi criado um site constituído por um indice.html onde se encontra o índice do
   <resultados>
     <resultado path='manifesto-tp4.xml'>
       manifesto-tp4 (xml)
-    </resultado>
-    <resultado path='manifesto-tp4.html'>
-      manifesto-tp4 (html)
     </resultado>
     <resultado path='./index.html'>
       index (html)
