@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT processo (id, nome, meta, conteudo)+ >
+
+<!-- PROCESSO -->
+
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT meta (estado, classePai, codigo, titulo) >
+<!ELEMENT conteudo (descritivoDaClasse, contextoAvaliacao, decisoesAvaliacao) >
+
+<!-- META -->
+
+<!ELEMENT estado (#PCDATA) >
+<!ELEMENT classePai (entradaLink) >
+<!ELEMENT codigo (#PCDATA) >
+<!ELEMENT titulo (#PCDATA) >
+
+<!ELEMENT entradaLink (id, nome, link) >
+<!ELEMENT link (#PCDATA) >
+
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+<!-- CONTEUDO -->
+
+<!ELEMENT descritivoDaClasse (descricao, notasAplicacao, exemplosNotasAplicacao, notasExclusao, termosIndice) >
+<!ELEMENT contextoAvaliacao (tipoProcesso, processoTransversal, donos, tipoIntervencaoParticipantes, processosRelacionados, legislacao) >
+<!ELEMENT decisoesAvaliacao (prazoConservacaoAdministrativa, destinoFinal) >
+
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+<!-- DESCRITIVODACLASSE -->
+
+<!ELEMENT descricao (para+) >
+<!ELEMENT notasAplicacao (para+) >
+<!ELEMENT exemplosNotasAplicacao (para+) >
+<!ELEMENT notasExclusao (para+) >
+<!ELEMENT termosIndice (para+) >
+
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+<!-- CONTEXTODEAVALIACAO -->
+
+<!ELEMENT tipoProcesso (#PCDATA) >
+<!ELEMENT processoTransversal (#PCDATA) >
+<!ELEMENT donos (entradaLink+) >
+<!ELEMENT tipoIntervencaoParticipantes (listaLink+) >
+<!ELEMENT processosRelacionados (listaLink+) >
+<!ELEMENT legislacao (listaLinkSig) >
+
+<!ELEMENT listaLink (titulo, entradaLink+) >
+<!ELEMENT listaLinkSig (sigla, entradaLink) >
+
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+<!-- DECISOESDEAVALIACAO -->
+
+<!ELEMENT prazoConservacaoAdministrativa (prazo, formaContagem, justificacaoPCA) >
+<!ELEMENT destinoFinal (destino, justificacaoDF) >
+
+<!-- PRAZOCONSERVACAOADMINISTRATIVA -->
+
+<!ELEMENT prazo (#PCDATA) >
+<!ELEMENT formaContagem (#PCDATA) >
+<!ELEMENT destino (#PCDATA) >
+
+<!ELEMENT justificacaoPCA (lista) >
+<!ELEMENT justificacaoDF (lista) >
+
+<!-- I -->
+
+<!ELEMENT lista (titulo, descricao) >
+<!ELEMENT descricao (para+) >
+
+<!ELEMENT para (#PCDATA|l)* >
+<!ELEMENT l (#PCDATA)* >
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->

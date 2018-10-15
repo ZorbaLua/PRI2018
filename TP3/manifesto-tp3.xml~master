@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:./manifesto.xsd">
+  <meta>
+    <id>PG38406</id>
+    <título>TP2</título>
+    <subtítulo>Relatório de trabalho prático da cadeira de PRI do MEI 2018/19</subtítulo>
+    <dinício>25/09/2018</dinício>
+    <dfim>01/10/2018</dfim>
+    <supervisor>
+      <nome>José Carlos Leite Ramalho</nome>
+      <email>jcr@di.uminho.pt</email>
+      <website>http://www4.di.uminho.pt/~jcr/</website>
+    </supervisor>
+  </meta>
+  <equipe>
+    <elemento>
+      <id>PG38406</id>
+      <nome>Adriano Campinho</nome>
+      <email>pg38406@alunos.uminho.pt</email>
+      <!-- <website>website1</website> -->
+      <!-- <foto path="path0"/> -->
+    </elemento>
+  </equipe>
+  <resumo>
+    <para>
+      O XML que seja validado pelo schema desenvolvido, em conjunto com processamento via
+      <b>XSLT</b>, permite algumas facilidades no tratamento de informação.
+    </para>
+    <para>
+      O trabalho permitiu a aprendisagem sobre a criacao de indices, assim como de multiplos ficheiros de output.
+    </para>
+  </resumo>
+  <resultados>
+    <resultado path='manifesto-tp3.xml'>
+      manifesto-tp3 (xml)
+    </resultado>
+    <resultado path='./pn.dtd'>
+      pn (dtd)
+    </resultado>
+    <resultado path='./manifesto.xsl'>
+      manifesto (xsl)
+    </resultado>
+    <resultado path='./manifesto-tp2.html'>
+      manifesto-tp2 (html)
+    </resultado>
+  </resultados>
+</manifesto>

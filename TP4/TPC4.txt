@@ -1,0 +1,17 @@
+Pegar nos datasets manipulados na aula e alterar o seguinte:
+
+criar servidor para guardar os datasets
+
+mudar os links em index.html de links diretos ao ficheiro para pedidos
+a um servidor( 
+    localhost:porta/obra?id=mx, onde x é o digito que identifica a obra 
+    )
+
+
+dentro das obras, o link para voltar para o index passa a ser um
+pedido para voltar ao index ( localhost:porta/obras )
+
+
+Criar um repositório github com os vários ficheiros requiridos
+
+O email terá o link para o repositório no seu corpo de mensagem

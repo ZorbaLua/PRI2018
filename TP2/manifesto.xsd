@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  vc:minVersion="1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
+  <xs:element name="manifesto">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="meta"/>
+        <xs:element ref="equipe"/>
+        <xs:element ref="resumo"/>
+        <xs:element ref="resultado"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="meta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="título"/>
+        <xs:element minOccurs="0" ref="subtítulo"/>
+        <xs:element minOccurs="0" ref="dinício"/>
+        <xs:element ref="dfim"/>
+        <xs:element ref="supervisor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="título" type="xs:string"/>
+  <xs:element name="subtítulo" type="xs:string"/>
+  <xs:element name="dinício" type="xs:string"/>
+  <xs:element name="dfim" type="xs:string"/>
+  <xs:element name="supervisor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nome"/>
+        <xs:element ref="email"/>
+        <xs:element minOccurs="0" ref="website"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nome" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="website" type="xs:string"/>
+  <xs:element name="equipe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="elemento"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="elemento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="nome"/>
+        <xs:element ref="email"/>
+        <xs:element minOccurs="0" ref="website"/>
+        <xs:element minOccurs="0" ref="foto"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="foto">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.foto"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.foto">
+    <xs:attribute name="path" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="resumo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="para"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="para">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="b"/>
+        <xs:element ref="i"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="b">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="i"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="i">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="b"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resultados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="resultado"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resultado">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="attlist.resultado"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.resultado">
+    <xs:attribute name="path"/>
+  </xs:attributeGroup>
+</xs:schema>
