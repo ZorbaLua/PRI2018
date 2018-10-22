@@ -1,0 +1,68 @@
+extends layout
+
+block corpo
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-light-grey
+        h1= obra.titulo + " - " + obra._id
+      .w3-container
+        table.w3-table.w3-all
+          if obra.subtitulo
+            tr
+              th Subtitulo:
+              td
+                p=obra.subtitulo
+          if obra.pasta
+            tr
+              th Pasta:
+              td
+                p=obra.pasta
+          if obra.tipo
+            tr
+              th Tipo:
+              td
+                p=obra.tipo
+          if obra.desc
+            tr
+              th Descricao:
+              td
+                p=obra.desc
+          if obra.compositor
+            tr
+              th Compositor:
+              td
+                p=obra.compositor
+          if obra.arranjo
+            tr 
+              th Arranjo:
+              td
+                p=obra.arranjo
+          tr
+            th Lista de instrumentos:
+            td                    
+              ul
+                each instrumento in obra.instrumentos
+                  li=instrumento.nome 
+                    .w3-container
+                      table.w3-table.w3-all
+                        if instrumento.partitura.path
+                          tr
+                            th Ficheiro:
+                            td=instrumento.partitura.path
+                        if instrumento.partitura.clave
+                          tr
+                            th Clave:
+                            td=instrumento.partitura.clave
+                        if instrumento.partitura.voz
+                          tr
+                            th Voz:
+                            td=instrumento.partitura.voz
+                        if instrumento.partitura.afinacao
+                          tr
+                            th Afinacao:
+                            td=instrumento.partitura.afinacao
+      footer.w3-container.w3-light-grey
+        p
+          a(href='http://localhost:5000/index') 
+            | Voltar à página principal
+        address Gerado por TP5

@@ -1,0 +1,16 @@
+extends layout
+
+block corpo
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-light-grey
+        h3 Dataset
+      .w3-container
+        table.w3-table.w3-bordered
+          tr
+            ul
+              each c in ind.index.item
+                li
+                  a(href='http://localhost:5000/obra/' + c.id)= c.titulo 
+      footer.w3-container.w3-light-grey
+        address Gerado por TP5
