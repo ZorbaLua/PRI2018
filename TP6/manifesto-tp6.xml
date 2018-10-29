@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:./manifesto.xsd">
+  <meta>
+    <id>PG38406</id>
+    <título>TP5</título>
+    <subtítulo>Relatório de trabalho prático da cadeira de PRI do MEI 2018/19</subtítulo>
+    <dinício>25/09/2018</dinício>
+    <dfim>01/10/2018</dfim>
+    <supervisor>
+      <nome>José Carlos Leite Ramalho</nome>
+      <email>jcr@di.uminho.pt</email>
+      <website>http://www4.di.uminho.pt/~jcr/</website>
+    </supervisor>
+  </meta>
+  <equipe>
+    <elemento>
+      <id>PG38406</id>
+      <nome>Adriano Campinho</nome>
+      <email>pg38406@alunos.uminho.pt</email>
+      <!-- <website>website1</website> -->
+      <!-- <foto path="path0"/> -->
+    </elemento>
+  </equipe>
+  <resumo>
+    <para>
+      O XML que seja validado pelo schema desenvolvido, em conjunto com processamento via
+      <b>XSLT</b>, permite algumas facilidades no tratamento de informação.
+    </para>
+    <para>
+O trabalho permitiu o envolvimento do aluno e demonstrar algumas utilizações comuns para exemplificar a potência destas linguagens,
+neste caso, a utilização da linguagem <i>pug</i> e introdução ao <i>json</i> e <i>css</i>;
+</para>
+<para>
+Foi criado um "Arquivo de Música Digital", atravez de ficheiros em json referentes a cada uma das obras;
+    </para>
+  </resumo>
+  <resultados>
+    <resultado path='manifesto-tp5.xml'>
+      manifesto-tp5 (xml)
+    </resultado>
+    <resultado path='./index.json'>
+      index (json)
+    </resultado>
+    <resultado path='./index.pug'>
+      index (pug)
+    </resultado>
+    <resultado path='./index.xml'>
+      index (xml)
+    </resultado>
+    <resultado path='./layout.pug'>
+      layout (pug)
+    </resultado>
+    <resultado path='./package.json'>
+      package (json)
+    </resultado>
+    <resultado path='./server.js'>
+      server (js)
+    </resultado>
+    <resultado path='./template.pug'>
+      template (pug)
+    </resultado>
+  </resultados>
+</manifesto>

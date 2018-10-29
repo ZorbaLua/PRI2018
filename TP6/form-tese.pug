@@ -1,0 +1,65 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-dark-grey
+                h3 Registo de Teses
+            .w3-container
+                form.w3-container(action='/processaForm', method='POST')
+                    br
+                    label.w3-text-dark-grey
+                        b Nome
+                    input.w3-input.w3-border.w3-light-grey(type='text', name='nome')
+
+                    br
+                    label.w3-text-dark-grey
+                        b Número / Identificador
+                    input.w3-input.w3-border.w3-light-grey(type='text', name='numero')
+
+                    br
+                    label.w3-text-dark-grey
+                        b Curso
+                    input.w3-input.w3-border.w3-light-grey(type='text', name='curso')
+
+                    br
+                    label.w3-text-dark-grey
+                        b Instituição
+                    input.w3-input.w3-border.w3-light-grey(type='text', name='insti')
+
+
+                    br
+                    label.w3-text-dark-grey
+                        b Titulo
+                    input.w3-input.w3-border.w3-light-grey(type='text', name='titulo')                   
+
+                    br
+                    label.w3-text-dark-grey
+                        b Data
+                    input.w3-input.w3-border.w3-light-grey(type='date', name='data')
+
+                    br
+                    label.w3-text-dark-grey
+                        b TIpo
+                        br
+
+                    input(type="radio", name="tipo", value="A", checked=tipo=="A")
+                    |  A                 
+                    input(type="radio", name="tipo", value="B", checked=tipo=="B")
+                    |  B       
+                    input(type="radio", name="tipo", value="C", checked=tipo=="C")
+                    |  C       
+                    input(type="radio", name="tipo", value="D", checked=tipo=="D")
+                    |  D       
+                    input(type="radio", name="tipo", value="E", checked=tipo=="E")
+                    |  E       
+
+                    br
+                    br
+                    input.w3-btn.w3-dark-grey(type='submit', value='Enviar')
+                    br
+                    
+                    br
+            footer.w3-container.w3-dark-grey
+                a(href ='http://localhost:4006/') 
+                    | Voltar
+                address Gerado por formApp
