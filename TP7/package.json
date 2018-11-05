@@ -1,0 +1,19 @@
+{
+  "name": "TP7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-express-routing.js",
+  "scripts": {
+    "start": "node server-express-routing.js",
+    "dev": "nodemon server-express-routing.js"
+  },
+  "author": "jcr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "jsonfile": "^5.0.0",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  }
+}
