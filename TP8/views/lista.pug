@@ -1,0 +1,7 @@
+h4 Lista de Uploads:
+    ul
+        each i in lista.uploads
+            table.w3-table.w3-all
+                tr
+                    td=i.d
+                    a(href='./uploaded/' + i.p)= i.p 
