@@ -1,0 +1,9 @@
+extends layout
+block content
+    header.w3-teal.w3-container
+      h3 Register New User
+    .w3-container
+      form.w3-container(method="POST" action="/users")
+        input.w3-input(type="text" name="user" placeholder="Admin")
+        input.w3-input(type="text" name="pass" placeholder="hunter22")
+        input.w3-btn.w3-teal(type="submit" value="Enviar")
